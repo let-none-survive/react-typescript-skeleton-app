@@ -7,10 +7,12 @@ type Params = {
   queryKey: [string, string]
 }
 
+const BASE_URL = 'https://api.github.com'
+
 export const searchUsers = (params: Params): Promise<GithubUser[]> | null => {
   const q = params.queryKey[1]
   if (!q) return null
-  return axios(process.env.BASE_URL + '/search/users', {
+  return axios(BASE_URL + '/search/users', {
     headers: {
       accept: 'application/vnd.github.v3+json',
     },
