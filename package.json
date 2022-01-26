@@ -1,16 +1,17 @@
 {
   "name": "react-typescript-skelet-app",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "React + TypeScript + Webpack - Skeleton app",
   "author": "Roma Boyko",
   "license": "MIT",
   "scripts": {
-    "build": "yarn run clean-dist && webpack --config=configs/webpack/prod.js",
+    "webpack:prod": "set NODE_ENV=production && webpack --config=configs/webpack/prod.js",
+    "build": "yarn clean-dist && yarn webpack:prod",
     "clean-dist": "rimraf dist/*",
     "format": "prettier --write \"src/**/*.tsx\" \"src/**/*.ts\"",
-    "start": "yarn run start-dev",
-    "start-dev": "webpack serve --config=configs/webpack/dev.js",
-    "start-prod": "yarn run build && node express.js"
+    "start": "node express.js",
+    "start:dev": "set NODE_ENV=development && webpack serve --config=configs/webpack/dev.js",
+    "start:prod": "yarn build && yarn start"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.10",
@@ -38,8 +39,6 @@
     "jest": "^26.6.3",
     "node-sass": "^5.0.0",
     "prettier": "^2.2.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
     "react-hot-loader": "^4.13.0",
     "rimraf": "^3.0.2",
     "sass-loader": "^10.1.1",
@@ -64,11 +63,10 @@
     "classnames": "^2.2.6",
     "express": "^4.17.1",
     "lodash": "^4.17.21",
-    "moment": "^2.29.1",
     "react-query": "^3.9.8",
     "react-router-dom": "^5.2.0",
-    "react-toastify": "^7.0.3",
-    "stripe": "^8.137.0",
-    "styled-components": "^5.2.3"
+    "styled-components": "^5.2.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }

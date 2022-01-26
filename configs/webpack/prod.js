@@ -18,7 +18,6 @@ module.exports = merge(commonConfig, {
     new webpack.DefinePlugin({
       'process.env': {
         'BASE_URL': JSON.stringify(process.env.BASE_URL),
-        "STRIPE_API_KEY": JSON.stringify(process.env.STRIPE_API_KEY)
       }
     })
   ],

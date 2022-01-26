@@ -16,14 +16,14 @@
 ## Usage
 **Development**
 
-`yarn run start-dev`
+`yarn start:dev`
 
 * Build app continuously (HMR enabled)
 * App served @ `http://localhost:8080`
 
 **Production**
 
-`yarn run start-prod`
+`yarn start:prod`
 
 * Build app once (HMR disabled) to `/dist/`
 * App served @ `http://localhost:3000`
@@ -34,11 +34,11 @@
 
 Command | Description
 --- | ---
-`yarn run start-dev` | Build app continuously (HMR enabled) and serve @ `http://localhost:8080`
-`yarn run start-prod` | Build app once (HMR disabled) to `/dist/` and serve @ `http://localhost:3000`
-`yarn run build` | Build app to `/dist/`
-`yarn run test` | Run tests
-`yarn run format` | Run prettier
-`yarn run start` | (alias of `yarn run start-dev`)
+`yarn start:dev` | Build app continuously (HMR enabled) and serve @ `http://localhost:8080`
+`yarn start:prod` | Build app once (HMR disabled) to `/dist/` and serve @ `http://localhost:3000`
+`yarn build` | Build app to `/dist/`
+`yarn test` | Run tests
+`yarn format` | Run prettier
+`yarn start` | (alias of `yarn start:dev`)
 
 **Note**: replace `yarn` with `npm` in `package.json` if you use npm.
